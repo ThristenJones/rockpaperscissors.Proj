@@ -5,6 +5,8 @@ class Player {
 this.name = name
 }
 
-displayFunction()
-array.length
+displayFunction(){
+for (let i = 0; i < gameArray.array.length; i++)
 }
+
+module.exports.player

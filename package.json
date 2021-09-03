@@ -1,0 +1,22 @@
+{
+  "name": "rockpaperscissorsproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ai.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThristenJones/rockpaperscissors.Proj.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThristenJones/rockpaperscissors.Proj/issues"
+  },
+  "homepage": "https://github.com/ThristenJones/rockpaperscissors.Proj#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
