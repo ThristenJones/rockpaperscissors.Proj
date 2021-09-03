@@ -1,3 +1,5 @@
+let playerFile = require('./player');
+
 const prompt = require('prompt-sync')();
 
 class Human extends Player {
