@@ -3,7 +3,7 @@ class Player{
         this.name = "";
         this.wins = 0;
         this.gestures = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
-        this.chosenGesture = ""
+        this.chosenGestures = ""
     }
 
     selectGesture(){
