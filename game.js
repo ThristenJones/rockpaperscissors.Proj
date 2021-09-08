@@ -1,5 +1,3 @@
-
-
 class Game {
     constructor(array)
 }this.array = [rock.paper,scissors,lizard,spock]

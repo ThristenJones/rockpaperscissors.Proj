@@ -2,8 +2,10 @@ let humanFile = require('./human');
 
 
 class Ai extends Player {
-    constuctor(name)
+    constuctor(name){
     super(name)
 }
+}
+
 
 
