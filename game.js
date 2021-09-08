@@ -1,5 +1,7 @@
-class Game {
-    constructor(array, rules,)
-}this.array = [rock.paper,scissors,lizard,spock]
 
-module.exports.game.array
+class Game {
+    constructor(array, results){
+this.array = [rock, paper, scissors, lizard, spock]
+}
+}
+module.exports.game.array 

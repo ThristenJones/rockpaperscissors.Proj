@@ -1,0 +1,10 @@
+ 
+
+
+let playerOne = new Human ("Thristen", game.array, results); 
+let playerTwo = new Ai("Thad", game.array, results); 
+
+playerOne.choiceFunction()
+playerTwo.computerSelection()
+playerTwo.printWinner()
+playerOne.printWinner()
