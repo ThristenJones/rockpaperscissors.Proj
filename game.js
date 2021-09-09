@@ -1,13 +1,5 @@
 class Game{
 
-<<<<<<< HEAD
-let rules = new Game()
-
-
-module.exports.game.array
-
-
-=======
     constructor(){
         this.player1 = new Human();
         this.player2 = null
@@ -34,11 +26,11 @@ module.exports.game.array
     
     //playerTwo.selectGesture()
     playerTwo(){
-        if(this.player = new Human){
+        if(this.player2 = new Human){
             human.selectGesture();
         }
 
-        else (this.player = new Ai)
+        else (this.player2 = new Ai)
             Ai.selectGesture();
         
     }
@@ -59,9 +51,6 @@ module.exports.game.array
     
     //rungame
 }
-<<<<<<< HEAD
+
 
 module.exports.game = game
-=======
->>>>>>> 07cd316554ab3f38bc51b6f35423fcccc2fdaa21
->>>>>>> ea5a33962568e9c1813f87b36e179866a5a7e8e5
