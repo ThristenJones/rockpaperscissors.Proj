@@ -13,4 +13,4 @@ class Human extends Player{
     }
 }
 
-    module.exports.human = human
+    module.exports = Human
