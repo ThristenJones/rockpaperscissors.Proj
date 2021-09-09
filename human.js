@@ -1,13 +1,12 @@
-let playerFile = require('./player');
+class Human{
+    constructor(){
+        super();
+        //unqiue to human
+        //this.name = prompt? or method?
+    }
 
-const prompt = require('prompt-sync')();
-
-class Human extends Player {
-    constuctor(name)
-    super(name)
+    selectGesure(){
+     let selectedGestures = +prompt("Enter o for rock, 1 for paper, 2 for scissors, 3 for lizzard, 4 for spock")
+     players.gestures[selectedGesture]   
+    }
 }
-
-usersInput = prompt("choose rock paper scissors lizard or spock?");
-displayFunction()
-
-module.exports.human
