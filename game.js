@@ -1,5 +1,13 @@
 class Game{
 
+<<<<<<< HEAD
+let rules = new Game()
+
+
+module.exports.game.array
+
+
+=======
     constructor(){
         this.player1 = new Human();
         this.player2 = null
@@ -51,5 +59,9 @@ class Game{
     
     //rungame
 }
+<<<<<<< HEAD
 
 module.exports.game = game
+=======
+>>>>>>> 07cd316554ab3f38bc51b6f35423fcccc2fdaa21
+>>>>>>> ea5a33962568e9c1813f87b36e179866a5a7e8e5
