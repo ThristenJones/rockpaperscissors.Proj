@@ -6,12 +6,39 @@ class Game{
     }
 
     // playerOne = new Human();
+    begingGame(){
+    }
     
     // make determination playerTwo = New Human or new AI
+    choosePlayers(){
+        let choice = prompt("Enter 1 to play with a friend or 2 to play against a computer ")
+        switch(choice){
+            case '1':
+                this.player2 = new Human
+        break;
+             case '2':
+                 this.player2 = new Ai
+        break;
+            default: 
+        break;
+        }
+    }
     
     //playerTwo.selectGesture()
+    playerTwo(){
+        if(this.player = new Human){
+            human.selectGesture();
+        }
+
+        else (this.player = new Ai)
+            Ai.selectGesture();
+        
+    }
     
     //Rules
+    rules(){
+        console.log("Rock crushes Scissors. Scissors cuts Paper. Paper covers Rock. Rock crushes Lizard.  Lizard poisons Spock. Spock smashes Scissors. Scissors decapitates Lizard. Lizard eats Paper Paper disproves. Spock Spock vaporizes Rock")
+    }
     
     //Select the game type
     
@@ -24,3 +51,5 @@ class Game{
     
     //rungame
 }
+
+module.exports.game = game

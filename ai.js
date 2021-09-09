@@ -1,7 +1,8 @@
+let playerFile = require('./player');
 const Player = require("./Player");
 
 
-class AI extends Player{
+class Ai extends Player{
     constructor(){
         super();
         this.name = "Computer";
@@ -12,3 +13,4 @@ class AI extends Player{
         this.chosenGesture = this.gestures[rand];
     }
 }
+

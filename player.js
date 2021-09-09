@@ -1,3 +1,5 @@
+let gameFile = require('./game')
+
 class Player{
     constructor(){
         this.name = "";
@@ -11,4 +13,4 @@ class Player{
     }
 }
 
-module.exports = Player;
+module.exports.player = Player
