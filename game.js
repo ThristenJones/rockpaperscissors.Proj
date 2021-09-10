@@ -128,7 +128,11 @@ class Game{
     
     //play again
     playAgain(){
+        let usersChoice = prompt("Press 1 to restart or 2 to end game")
+        let usersChoice = usersChoice.toLowerCase()
+        if(usersChoice === "yes" || answer === "y" ){
         this.battle()
+        }
         
     }
     
