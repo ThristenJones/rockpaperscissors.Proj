@@ -1,5 +1,5 @@
 const Player = require('./player');
-const prompt = require ('prompt-sync')()
+const prompt = require ('prompt-sync')();
 
 class Human extends Player{
     constructor(){

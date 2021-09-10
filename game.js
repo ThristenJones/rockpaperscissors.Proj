@@ -1,5 +1,6 @@
-const Human = require('./human')
-const AI = require ('./ai')
+const Human = require('./human');
+const AI = require ('./ai');
+const prompt = require('prompt-sync')();
 
 
 class Game{
@@ -20,7 +21,7 @@ class Game{
                 this.player2 = new Human();
         break;
              case '2':
-                 this.player2 = new Ai();
+                 this.player2 = new AI();
         break;
             default: 
         break;
@@ -93,8 +94,10 @@ class Game{
     else if(this.player1.chosenGestures === this.player2.chosenGestures){
         console.log("Tie game")
     }
-        else{console.log(`${player2.name} won this round`)
-    this.player2.wins += 1}
+        else{
+            console.log(`${player2.name} won this round`)
+    this.player2.wins += 1
+        }
     }
     console.log("We have a winner");
 }
@@ -108,13 +111,7 @@ class Game{
     //Select the game type
     
     //Battle- loop selectGesture, decide winner requirement met player1 or player2 get 2 win total
-    BattleLoop(){
-        while(this.player1.wins < 3 && this.player2.wins < 3){
-        
-        this.player1.selectGesture();
-        this.player2.selectGesture();
-        }
-    }
+    
     //print winner
     printWinner(){
         if(this.player1.wins === 3){
@@ -129,7 +126,7 @@ class Game{
     //play again
     playAgain(){
         let usersChoice = prompt("Press 1 to restart or 2 to end game")
-        let usersChoice = usersChoice.toLowerCase()
+        usersChoice = usersChoice.toLowerCase()
         if(usersChoice === "yes" || answer === "y" ){
         this.battle()
         }
@@ -139,13 +136,13 @@ class Game{
     
     //rungame
     runGame(){
-        this.choosePlayers()
-        this.battle()
-        this.rules()
-        this.printWinner()
-        this.playAgain()
+        this.choosePlayers();
+        this.battle();
+        this.rules();
+        this.printWinner();
+        this.playAgain();
     }
 }
 
 
-module.exports = Game
+module.exports = Game;
