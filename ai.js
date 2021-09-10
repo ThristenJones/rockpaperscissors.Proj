@@ -1,5 +1,4 @@
-let playerFile = require('./player');
-const Player = require("./Player");
+const Player = require("./player");
 
 class AI extends Player{
         constructor(){
@@ -13,4 +12,6 @@ class AI extends Player{
         this.chosenGestures = this.gestures[rand];
     }
 }
+
+module.exports = AI
 

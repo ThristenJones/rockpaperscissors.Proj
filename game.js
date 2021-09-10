@@ -1,3 +1,7 @@
+const Human = require('./human')
+const AI = require ('./ai')
+
+
 class Game{
 
     constructor(){
@@ -6,8 +10,7 @@ class Game{
     }
 
     // playerOne = new Human();
-    beginGame(){
-    }
+   
 
     // make determination playerTwo = New Human or new AI
     choosePlayers(){
@@ -26,12 +29,13 @@ class Game{
     
     //playerTwo.selectGesture()
     battle(){
-    this.player1.selectGesture();
-    this.player2.selectGesture();
+    
+    while(player1.wins < 3 && player2.wins < 3){
+        
+        this.player1.selectGesture();
+        this.player2.selectGesture();
 
-    while(player1.wins < 3 || player2.wins < 3){
-        console.log("We have a winner")
-    }
+    
 
     if(this.player1.chosenGestures === "rock" && this.player2.chosenGestures === "scissors" ){
         console.log(`${player1.name} won this round`)
@@ -92,16 +96,10 @@ class Game{
         else{console.log(`${player2.name} won this round`)
     this.player2.wins += 1}
     }
+    console.log("We have a winner");
+}
 
     
-
-
-    
-
-    
-    
-    
-
     //Rules
     rules(){
         console.log("Rock crushes Scissors. Scissors cuts Paper. Paper covers Rock. Rock crushes Lizard.  Lizard poisons Spock. Spock smashes Scissors. Scissors decapitates Lizard. Lizard eats Paper Paper disproves. Spock Spock vaporizes Rock")
@@ -110,14 +108,40 @@ class Game{
     //Select the game type
     
     //Battle- loop selectGesture, decide winner requirement met player1 or player2 get 2 win total
-    
+    BattleLoop(){
+        while(this.player1.wins < 3 && this.player2.wins < 3){
+        
+        this.player1.selectGesture();
+        this.player2.selectGesture();
+        }
+    }
     //print winner
+    printWinner(){
+        if(this.player1.wins === 3){
+            console.log(`${player1.name} wins the game!`)
+        }
+
+        else (this.player2.wins === 3)
+            console.log(`${player2.name} wins the game!`)
+        
+    }
     
     //play again
+    playAgain(){
+        this.battle()
+        
+    }
     
     
     //rungame
+    runGame(){
+        this.choosePlayers()
+        this.battle()
+        this.rules()
+        this.printWinner()
+        this.playAgain()
+    }
 }
 
 
-module.exports.game = game
+module.exports = Game

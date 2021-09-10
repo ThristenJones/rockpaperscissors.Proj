@@ -1,4 +1,3 @@
-let gameFile = require('./game')
 
 class Player{
     constructor(){
@@ -13,4 +12,4 @@ class Player{
     }
 }
 
-module.exports.players = Player;
+module.exports = Player;
