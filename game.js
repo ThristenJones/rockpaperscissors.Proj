@@ -18,7 +18,7 @@ class Game{
         let choice = prompt("Enter 1 to play with a friend or 2 to play against the computer ")
         switch(choice){
             case '1':
-                this.player2 = new Human();
+                 this.player2 = new Human();
         break;
              case '2':
                  this.player2 = new AI();
@@ -31,7 +31,7 @@ class Game{
     //playerTwo.selectGesture()
     battle(){
     
-    while(player1.wins < 3 && player2.wins < 3){
+    while(this.player1.wins < 3 && this.player2.wins < 3){
         
         this.player1.selectGesture();
         this.player2.selectGesture();
@@ -39,55 +39,55 @@ class Game{
     
 
     if(this.player1.chosenGestures === "rock" && this.player2.chosenGestures === "scissors" ){
-        console.log(`${player1.name} won this round`)
+        console.log(`${this.player1.name} won this round`)
         this.player1.wins += 1
     }
         
 
     else if(this.player1.chosenGestures === "scissors" && this.player2.chosenGestures === "paper" ){
-        console.log(`${player1.name} won this round`)
+        console.log(`${this.player1.name} won this round`)
         this.player1.wins += 1
     }
     
 
     else if(this.player1.chosenGestures === "paper" && this.player2.chosenGestures === "rock"){
-        console.log(`${player1.name} won this round`)
+        console.log(`${this.player1.name} won this round`)
         this.player1.wins += 1
         }
        
 
     else if(this.player1.chosenGestures === "rock" && this.player2.chosenGestures === "lizard"){
-        console.log(`${player1.name} won this round`)
+        console.log(`${this.player1.name} won this round`)
         this.player1.wins += 1
         }
 
     else if(this.player1.chosenGestures === "lizard" && this.player2.chosenGestures === "spock"){
-        console.log(`${player1.name} won this round`)
+        console.log(`${this.player1.name} won this round`)
         this.player1.wins += 1
         }
 
     else if(this.player1.chosenGestures === "spock" && this.player2.chosenGestures === "scissors"){
-        console.log(`${player1.name} won this round`)
+        console.log(`${this.player1.name} won this round`)
         this.player1.wins += 1
         }
 
     else if(this.player1.chosenGestures === "scissors" && this.player2.chosenGestures === "lizard"){
-        console.log(`${player1.name} won this round`)
+        console.log(`${this.player1.name} won this round`)
         this.player1.wins += 1
         }
 
     else if(this.player1.chosenGestures === "lizzard" && this.player2.chosenGestures === "paper"){
-        console.log(`${player1.name} won this round`)
+        console.log(`${this.player1.name} won this round`)
         this.player1.wins += 1
         }
 
     else if(this.player1.chosenGestures === "paper" && this.player2.chosenGestures === "spock"){
-        console.log(`${player1.name} won this round`)
+        console.log(`${this.player1.name} won this round`)
         this.player1.wins += 1
         }
 
     else if(this.player1.chosenGestures === "spock" && this.player2.chosenGestures === "rock"){
-        console.log(`${player1.name} won this round`)
+        console.log(`${this.player1.name} won this round`)
         this.player1.wins += 1
         }
 
@@ -95,11 +95,10 @@ class Game{
         console.log("Tie game")
     }
         else{
-            console.log(`${player2.name} won this round`)
+            console.log(`${this.player2.name} won this round`)
     this.player2.wins += 1
         }
     }
-    console.log("We have a winner");
 }
 
     
@@ -115,20 +114,21 @@ class Game{
     //print winner
     printWinner(){
         if(this.player1.wins === 3){
-            console.log(`${player1.name} wins the game!`)
+            console.log(`${this.player1.name} wins the game!`)
         }
 
         else (this.player2.wins === 3)
-            console.log(`${player2.name} wins the game!`)
+            console.log(`${this.player2.name} wins the game!`)
         
     }
     
     //play again
     playAgain(){
-        let usersChoice = prompt("Press 1 to restart or 2 to end game")
-        usersChoice = usersChoice.toLowerCase()
-        if(usersChoice === "yes" || answer === "y" ){
-        this.battle()
+        let usersChoice = prompt("Enter yes: to play again or No: to exit")
+    
+        
+        if(usersChoice === "yes" || usersChoice === "y" ){
+        this.runGame();
         }
         
     }
@@ -136,9 +136,9 @@ class Game{
     
     //rungame
     runGame(){
+        this.rules();
         this.choosePlayers();
         this.battle();
-        this.rules();
         this.printWinner();
         this.playAgain();
     }
